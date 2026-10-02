@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#fff2e9"><title>A little sorry, with love</title>
+<style>
+:root{--ink:#684b48;--rose:#c9797e;--cream:#fff8f0;--pink:#f4d3ce}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:#f9eee5;overflow:hidden}
+.app{height:100svh;max-width:520px;margin:auto;position:relative;display:flex;flex-direction:column;padding:env(safe-area-inset-top) 17px env(safe-area-inset-bottom);background:radial-gradient(ellipse at 50% 30%,#fffaf3,#f6e4da 75%,#efd5ce)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:15px 4px 10px;font:11px system-ui;letter-spacing:2px;color:#a66c6c;text-transform:uppercase}
+.progress{display:flex;gap:5px}.progress span{height:4px;border-radius:9px;background:#e6c6bc;flex:1;overflow:hidden}.progress b{display:block;height:100%;width:0;background:#c9797e;transition:width .35s}
+.deck{position:relative;flex:1;min-height:0}.slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:18px 10px;opacity:0;transform:translateX(35px) rotate(1deg) scale(.97);pointer-events:none;transition:.5s cubic-bezier(.2,.8,.2,1)}
+.slide.active{opacity:1;transform:none;pointer-events:auto}.eyebrow{font:10px system-ui;letter-spacing:3px;text-transform:uppercase;color:#b77b78;margin-bottom:12px}
+h1{font-size:clamp(39px,10vw,58px);line-height:1.04;font-weight:400;margin:8px 0 12px;color:#805b54}h2{font-size:clamp(30px,8vw,42px);font-weight:400;line-height:1.1;margin:7px 0 14px;color:#805b54}
+p{font-size:17px;line-height:1.65;max-width:360px;margin:8px auto;color:#795d58}.rose{color:#c9797e;font-style:italic}
+.art{width:min(78vw,340px);height:min(47vh,330px);object-fit:cover;object-position:center 44%;border-radius:48% 48% 42% 42%;mix-blend-mode:multiply;filter:drop-shadow(0 15px 18px #b67e7140);animation:float 4s ease-in-out infinite}
+.art.small{width:min(63vw,250px);height:min(31vh,220px)}
+.frame{width:100%;max-width:380px;padding:23px 20px;border:1px solid #e6c1b7;border-radius:28px;background:#fffaf0bd;box-shadow:0 14px 40px #a66c6c1c;position:relative}
+.frame:before{content:'✿';position:absolute;top:-15px;left:18px;color:#c9797e;font-size:25px}
+.bigheart{font-size:46px;animation:pulse 1.6s infinite;margin:5px}
+.bubble{background:#fffaf0;border:1px solid #eed1c8;border-radius:20px;padding:12px 15px;margin:7px 0;font-size:15px;box-shadow:0 5px 15px #a66c6c12}
+.btns{display:flex;align-items:center;justify-content:space-between;padding:12px 0 calc(13px + env(safe-area-inset-bottom));gap:12px}
+button{border:0;border-radius:28px;padding:13px 22px;background:#c9797e;color:white;font:600 14px system-ui;box-shadow:0 7px 18px #c9797e44;min-width:108px}
+button:disabled{opacity:.3}.count{font:12px system-ui;color:#a77a72}
+.sparkle{position:absolute;color:#d99a91;pointer-events:none;animation:twinkle 2.5s infinite}.petal{position:fixed;top:-30px;z-index:0;pointer-events:none;animation:fall linear forwards}
+@keyframes float{50%{transform:translateY(-9px) rotate(1deg)}}@keyframes pulse{50%{transform:scale(1.13)}}@keyframes twinkle{50%{opacity:.2;transform:scale(.7) rotate(20deg)}}@keyframes fall{to{transform:translateY(110vh) rotate(280deg);opacity:.1}}
+@media(max-height:680px){.art{height:33vh}.art.small{height:23vh}p{font-size:15px}.slide{padding-top:5px;padding-bottom:5px}.frame{padding:16px}}
+</style></head><body><main class="app">
+<header class="top"><span>♡ a note for you</span><span id="step">01 / 06</span></header>
+<div class="progress" id="progress"><span><b></b></span><span><b></b></span><span><b></b></span><span><b></b></span><span><b></b></span><span><b></b></span></div>
+<div class="deck">
+<section class="slide active"><div class="eyebrow">a little surprise</div><img class="art" src="teddy-roses.png" alt="Watercolor teddy bear holding pink roses"><h1>For you,<br><i class="rose">my favourite person</i></h1><p>I made this tiny corner of the world just to say something from my heart.</p></section>
+<section class="slide"><div class="eyebrow">please read this</div><img class="art small" src="teddy-roses.png" alt="Cute teddy with roses"><div class="frame"><div class="bigheart">💗</div><h2>I'm sorry, love.</h2><p>I'm sorry I haven't been talking to you as much lately. I never wanted you to feel ignored or unimportant.</p></div></section>
+<section class="slide"><div class="eyebrow">you deserve to know</div><div class="bigheart">🌷</div><h2>You are <i class="rose">important</i> to me.</h2><p>My quiet moments don't mean my care has changed. You deserve my time, attention, and honest communication.</p><div class="bubble">♡ You are never “too much” for wanting to talk.</div><div class="bubble">♡ Your feelings matter to me.</div></section>
+<section class="slide"><div class="eyebrow">the little things i miss</div><img class="art small" src="teddy-roses.png" alt="Teddy and flowers"><div class="frame"><h2>Our little talks</h2><div class="bubble">🌸 Your random stories</div><div class="bubble">🧸 Our silly conversations</div><div class="bubble">💌 Hearing about your day</div><p>They mean more to me than I always say.</p></div></section>
+<section class="slide"><div class="eyebrow">a promise from me</div><div class="bigheart">🤍</div><h2>I'll do better.</h2><p>I'll make more effort to check in, listen, and communicate instead of letting busy days turn into silence.</p><p class="rose"><i>Not just words — I'll show you.</i></p><div class="sparkle" style="top:15%;left:12%">✦</div><div class="sparkle" style="bottom:15%;right:12%">✧</div></section>
+<section class="slide"><div class="eyebrow">one last hug</div><img class="art small" src="teddy-roses.png" alt="Teddy holding roses"><div class="frame"><h2><i class="rose">Can we start</i><br>with one conversation?</h2><p>No pressure to reply right away. I just wanted you to know that I care about you, and I'm sorry. ❤️</p><div class="bigheart">🫂</div><p class="rose">Sending you the biggest hug ♡</p></div></section>
+</div>
+<footer class="btns"><button id="back" disabled>← Back</button><span class="count" id="count">1 of 6</span><button id="next">Next →</button></footer>
+</main><script>
+const slides=[...document.querySelectorAll('.slide')],bars=[...document.querySelectorAll('.progress b')];let n=0;
+function show(x){n=Math.max(0,Math.min(5,x));slides.forEach((s,i)=>s.classList.toggle('active',i===n));bars.forEach((b,i)=>b.style.width=i<=n?'100%':'0');document.getElementById('step').textContent=String(n+1).padStart(2,'0')+' / 06';document.getElementById('count').textContent=(n+1)+' of 6';document.getElementById('back').disabled=n===0;document.getElementById('next').textContent=n===5?'Read again ↻':'Next →'}
+document.getElementById('back').onclick=()=>show(n-1);document.getElementById('next').onclick=()=>show(n===5?0:n+1);
+let x0=0;const deck=document.querySelector('.deck');deck.addEventListener('touchstart',e=>x0=e.changedTouches[0].clientX,{passive:true});deck.addEventListener('touchend',e=>{let d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)show(n+(d<0?1:-1))},{passive:true});
+function petal(){let p=document.createElement('span');p.className='petal';p.textContent=['♡','🌸','✿','♥'][Math.floor(Math.random()*4)];p.style.left=Math.random()*100+'vw';p.style.fontSize=(13+Math.random()*15)+'px';p.style.animationDuration=(7+Math.random()*6)+'s';document.body.append(p);setTimeout(()=>p.remove(),14000)}setInterval(petal,900);
+</script></body></html>
